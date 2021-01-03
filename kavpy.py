@@ -26,7 +26,7 @@ def multiply_multiple(nums):
     product = 0
     for x in nums:
         product *= x
-    print(products)
+    print(product)
 
 #Division
 def divide(x,y):
@@ -50,7 +50,7 @@ def exponential(x,y):
 
 #Square Root
 def sq_root(x):
-    x = sqrt(x)
+    x = math.sqrt(x)
     print('The square root of',x,'is',x)
 
 #Cube Root
@@ -87,7 +87,7 @@ def peri_rectangle(length,breadth):
 
 #Area of Triangle
 def area_triangle(base,height):
-    print('The area of rectangle with base',base,'and height',height,'is',(base*height)/2)
+    print('The area of triangle with base',base,'and height',height,'is',(base*height)/2)
 
 #Perimeter of Triangle
 def peri_triangle(side1,side2,side3):
@@ -149,7 +149,7 @@ def area_kite(diagonal1,diagonal2):
 
 #Perimeter of Kite
 def peri_kite(side1,side2):
-    print('The perimeter of kite with sides',side,'and',side2,'is',2*(side1+side2))
+    print('The perimeter of kite with sides',side1,'and',side2,'is',2*(side1+side2))
 
 #Area of Ellipse
 def area_ellipse(axis1,axis2):
@@ -193,7 +193,7 @@ def volume_cylinder(r,height):
 
 #Total Surface Area of Cylinder
 def surface_area_cylinder(r,height):
-    surface_area_cylinder = (2 * math.pi * r)*(r + h)
+    surface_area_cylinder = (2 * math.pi * r)*(r + height)
     print('The total surface area of cylinder with radius',r,'and height',height,'is',surface_area_cylinder)
 
 #Curved Surface Area of Cylinder
@@ -256,18 +256,18 @@ def hcf(nums):
     print(hcf)
 
 #Fining if a number is prime or not
-    def prime(num):
-        if num > 1:
-            for i in range(2,num):
-                if num % i == 0:
-                    print('The number',num,'is not a prime number')
-                    break
-                else:
-                    print('The number',num,'is a prime number')
-        elif num == 1:
-            print('1 is a special number that is neither prime or composite')
-        else:
-            print('Please enter a valid positive number')
+def prime(num):
+    if num > 1:
+        for i in range(2,num):
+            if num % i == 0:
+                print('The number',num,'is not a prime number')
+                break
+            else:
+                print('The number',num,'is a prime number')
+    elif num == 1:
+        print('1 is a special number that is neither prime or composite')
+    else:
+        print('Please enter a valid positive number')
 
 #Finding if a number is an armstrong number or not
 def armstrong(num):
@@ -351,7 +351,6 @@ def lowest_number(nums):
 
 #Finding if a number is in a list or not
 def find_number(num,num_list):
-    found = False
     for i in num_list:
         if i == num:
             place = num_list.index(num)
@@ -491,7 +490,6 @@ def find_word(word_to_be_found,file):
     except:
         print('Enter a valid file. Make sure the file is in the same directory as your python program')
         quit()
-    found = False
     for line in handle:
         words = line.split()
         for word in words:
